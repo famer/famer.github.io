@@ -32,7 +32,7 @@ Description: The aim of the thesis is to develop a mobile application that will 
     Java server application and MongoDB data storage containerized using Docker containerization. Project builds using Maven.  
     Supervisor: [Ing. Josef Gattermayer](https://www.ackee.cz/blog/author/josef-gattermayerackee-cz/)  [Statement <i class="fa fa-file-pdf-o"></i> PDF]({{ site.baseurl }}/assets/diplomas/3/supervisors_feedback_signed.pdf)  
     Opponent: [Ing. Milan Dojchinovski](http://www.dojchinovski.mk)  [Statement <i class="fa fa-file-pdf-o"></i> PDF]({{ site.baseurl }}/assets/diplomas/3/opponents_feedback_signed.pdf)    
-    Code: [GitHub backend source](https://github.com/famer/restful-api-service) , [iPhone fronted app](https://github.com/famer/Pro-Places)  
+    Code: [iPhone fronted app](https://github.com/famer/Pro-Places)  
     Maven buildlog: [build.log](https://github.com/famer/restful-api-service/blob/master/build.log)  
     Assignment: [<i class="fa fa-file-pdf-o"></i> PDF]({{ site.baseurl }}/assets/diplomas/3/assignment.pdf)  
     The paper: [Mobile application and API server to store points of interest <i class="fa fa-file-pdf-o"></i> PDF]({{ site.baseurl }}/assets/diplomas/3/DP_Tatarshaov_Timur_2015.pdf)    
