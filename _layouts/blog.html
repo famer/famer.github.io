@@ -1,0 +1,17 @@
+---
+layout: core
+---
+
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-9">
+        <h2> {{ page.title }} </h2>
+      </div>
+      <div class="col-md-3">
+            <img src="{{ site.baseurl }}/assets/Timur Tatarshaov.jpg" class="rounded" style="width:100%" />
+            {% assign fullName = site.data.general_data.name | append: " " | append: site.data.general_data.surname %}
+            <h4>{{ fullName }}</h4>
+      </div>
+      <div class="col-md-9">
+            {{ content }}
+    </div>

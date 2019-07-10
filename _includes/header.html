@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>{{ page.title }} - {{ site.name }}</title>
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1">
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <meta charset="utf-8">
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ page.title }} - {{ site.name }}" />
+    <meta property="og:image" content="{{ "/assets/Timur Tatarshaov.jpg" | absolute_url }}"/>
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:site_name" content="Timur Tatarshaov Personal Website" />
+    <link rel="stylesheet"
+          href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"
+          href="{{ site.baseurl }}/css/styles.css">
+    <link rel="stylesheet"
+          href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700"
+          rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS"
+          href="/blog/feed/rss.xml">
+    <link rel="alternate" type="application/atom+xml"
+          title="ATOM" href="/blog/feed/atom.xml">
+    {% for styleFile in page.styles %}
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/{{ styleFile }}">
+    {% endfor %}
+  </head>
+  <body>

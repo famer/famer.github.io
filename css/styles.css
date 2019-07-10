@@ -1,0 +1,32 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5em;
+}
+
+.black {
+	color: #444;
+}
+
+.red {
+	color: #f00;
+}
+
+img.rounded {
+	border-radius: 6px;
+}
+
+.contentRow {
+	min-height: 300px;
+}
+
+ul.posts {
+    list-style-type: none;
+}
+
+img.enlarge {
+	transition: width 1s ease-in-out;
+}
+
+img.enlarge:hover {
+  width: 100%;
+}

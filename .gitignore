@@ -1,0 +1,5 @@
+_site
+.sass-cache
+assets/cv/templates/
+Gemfile.lock
+.jekyll-metadata

@@ -1,0 +1,145 @@
+{% include header.html %}
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-7"><!-- Main info -->
+			<h1>{{ site.data.general_data.name }} {{ site.data.general_data.surname }}</h1>  
+			<span class="fa fa-mobile"></span> <span>{{ site.data.general_data.phone }}</span> <span class="fa fa-globe"></span> <span>{{ site.data.general_data.website }}</span> <span class="fa fa-envelope-o"></span> <span>{{ site.data.general_data.email }} </span>
+
+
+			<h2> <strong>{{ page.title }}</strong> </h2>
+			<!--h3 class="text-uppercase">Personal Summary</h3>
+
+			<p>{{ site.data.resume.[page.dataFileName].personalSummary }}</p-->
+
+			<h3 class="text-uppercase">Work Experience</h3>
+
+			{% for experience in site.data.resume.[page.dataFileName].experiences %}
+			{% if experience.published != false %}
+
+			<strong><em>{{ experience.company }}</em></strong> <br />
+			<span class="text-uppercase">{{ experience.title }}</span>
+			<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			<span>{{ experience.period }}</span>
+			{% if experience.title or experience.period %}
+			<br />
+			{% endif %}
+
+			{% if experience.responsibilities %}
+			<br />
+			<p>{{ experience.responsibilities }}</p>
+			{% endif %}
+
+			{% if experience.duties %}
+			<br />
+			<strong><em>Duties:</em></strong>
+			<ul>
+			{% for duty in experience.duties %}
+				<li>{{ duty }}</li>
+			{% endfor %}
+			</ul>
+			{% endif %}
+
+			<br />
+
+			{% endif %}
+			{% endfor %}
+
+			<h3 class="text-uppercase">KEY SKILLS AND COMPETENCIES</h3>
+			<ul>
+			{% for keySkillAndCompetence in site.data.general_data.keySkillsAndCompetencies %}
+				<li>{{ keySkillAndCompetence }}</li>
+			{% endfor %}
+			</ul>
+
+
+			<h3 class="text-uppercase">Other Projects</h3>
+
+			{% for project in site.data.general_data.projects %}
+			<strong><em>{{ project.title }}</em></strong> <br />
+			{% if project.url %}{{ project.url }} <br />{% endif %}
+			{% if project.sources %}
+			<span>Sources:</span> <span>{{ project.sources }}</span><br/>
+			{% endif %}
+			<span>{{ project.description }}</span> <br />
+			<span>{{ project.date }}</span><br />
+			{% endfor %}
+
+			<h3 class="text-uppercase">Mobile Projects</h3>
+
+			{% for project in site.data.general_data.personalProjects %}
+			<strong><em>{{ project.title }}</em></strong> <br />
+			{{ project.url }} <br />
+			{% if project.sources %}
+			<span>Sources:</span> <span>{{ project.sources }}</span><br/>
+			{% endif %}
+			<span>{{ project.description }}</span> <br />
+			<span>{{ project.date }}</span><br />
+			{% endfor %}
+
+			<br />
+			<h3 class="text-uppercase">ACADEMIC QUALIFICATIONS</h3>
+			<br />
+			<ul class="list-unstyled">
+			{% for academicQualification in site.data.general_data.academicQualifications %}
+				<li>{{ academicQualification.degree }}
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					{{ academicQualification.major }}<br />
+					<strong><em>{{ academicQualification.university }}</em></strong>
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					<strong><em>{{ academicQualification.graduationYear }}</em></strong><br /><br />
+				</li>
+			{% endfor %}
+			</ul>
+
+		</div><!--/ Main info -->
+		<div class="col-md-3"><!-- Minor info -->
+			<!--img src="{{ site.baseurl }}/assets/photo.jpg" class="rounded" style="width:250px; margin-top:50px" /-->
+			<h3 style="margin-top:70px" class="text-uppercase">Areas of expertise</h3>
+
+			<br />
+			<ul class="list-unstyled">
+				{% for areaOfExperience in site.data.general_data.areasOfExperience %}
+				<li><em>{{ areaOfExperience }}</em></li><br />
+				{% endfor %}
+			</ul>
+
+			<br />
+			<h3 class="text-uppercase">PERSONAL SKILLS</h3>
+
+			<br />
+			<ul class="list-unstyled">
+			{% for personalSkill in site.data.general_data.personalSkills %}
+				<li><em>{{ personalSkill }}</em></li><br />
+			{% endfor %}
+			</ul>
+
+			<br />
+			<h3 class="text-uppercase">LANGUAGES</h3>
+
+			<br />
+			<ul class="list-unstyled">
+			{% for language in site.data.general_data.languages %}
+				<li><em>{{ language.title }}: {{ language.level }}</em></li><br />
+			{% endfor %}
+			</ul>
+
+			<br />
+			<h3 class="text-uppercase">PERSONAL DETAILS</h3>
+
+			<em>Location: {{ site.data.general_data.location }}</em><br /><br />
+			<em>Phone: {{ site.data.general_data.phone }}</em><br />
+			<em>Email: {{ site.data.general_data.email }}</em><br />
+			<em>Website: {{ site.data.general_data.website }}</em><br /><br />
+
+			<em>Date of birth: {{ site.data.general_data.dateOfBirth }}</em><br />
+			<em>Driving license: Yes</em><br />
+			<em>Citizenship: {{ site.data.general_data.citizenship }}</em><br />
+
+		</div><!--/ Minor info -->
+
+	</div>
+	
+</div>
+{% include footer.html %}

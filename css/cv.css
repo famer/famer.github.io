@@ -1,0 +1,22 @@
+body {
+	font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.9em;
+}
+h1, h3, .darkRed {
+	color: #742426;
+}
+
+@media print {
+	h1, h3, .darkRed {
+		color: #742426 !important;
+	}
+}
+
+/*
+.container {
+	background: white;
+	padding: 60px 30px 30px 60px;
+	box-shadow: 0 10px 6px -6px #777;
+	margin: 40px;
+}
+*/

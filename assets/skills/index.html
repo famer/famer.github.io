@@ -1,0 +1,82 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript">
+    function idIndex(a,id) {
+      for (var i=0;i<a.length;i++) 
+      {if (a[i].id == id) return i;}
+      return null;
+    }  
+
+    var nodes=[], links=[];
+    function draw_forced_directory(data){
+          //Creating graph object
+    data.results[0].data.forEach(function (row) {
+      row.graph.nodes.forEach(function (n) 
+      {
+        if (idIndex(nodes,n.id) == null)
+              nodes.push({id:n.id,label:n.labels[0],title:n.properties.name});
+      });
+      links = links.concat( row.graph.relationships.map(function(r) {
+      return {source:idIndex(nodes,r.startNode),target:idIndex(nodes,r.endNode),type:r.type, value:1};
+      }));
+    });
+    graph = {nodes:nodes, links:links};
+
+
+    // force layout setup
+    var width = 800, height = 800;
+    var force = d3.layout.force()
+    .charge(-300).linkDistance(50).size([width, height]);
+
+    // setup svg div
+    var svg = d3.select("#graph").append("svg")
+    .attr("width", "100%").attr("height", "100%")
+    .attr("pointer-events", "all");
+
+    // load graph (nodes,links) json from /graph endpoint
+    force.nodes(graph.nodes).links(graph.links).start();
+
+    // render relationships as lines
+    var link = svg.selectAll(".link")
+        .data(graph.links).enter()
+        .append("line").attr("class", "link");
+
+    //color assignment
+    var get_color = {"gpe": "#E81042", "person": "#80e810", "org": "#10DDE8"};
+
+    // render nodes as circles, css-class from label
+    var node = svg.selectAll(".node")
+        .data(graph.nodes).enter()
+        .append("circle")
+        .attr("class", function (d) { return "node "+d.label })
+        .attr("r", 10)
+        .attr("fill", function (d){return get_color[d.label]})
+        .call(force.drag);
+
+    // html title attribute for title node-attribute
+    node.append("title")
+        .text(function (d) { return d.title; })
+
+    // force feed algo ticks for coordinate computation
+    force.on("tick", function() {
+      link.attr("x1", function(d) { return d.source.x; })
+         .attr("stroke", "#999")
+         .attr("y1", function(d) { return d.source.y; })
+         .attr("x2", function(d) { return d.target.x; })
+         .attr("y2", function(d) { return d.target.y; });
+
+      node.attr("cx", function(d) { return d.x; })
+         .attr("cy", function(d) { return d.y; });
+    });
+
+  };
+var data = {"results":[{"columns":["n"],"data":[{"graph":{"nodes":[{"id":"0","labels":["Knowledge"],"properties":{"title":"Web"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"1","labels":["Knowledge"],"properties":{"title":"Semantic Web"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"2","labels":["Knowledge"],"properties":{"title":"Microdata"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"3","labels":["Knowledge"],"properties":{"title":"HTTP"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"4","labels":["Knowledge"],"properties":{"title":"REST"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"5","labels":["Knowledge"],"properties":{"title":"Sockets"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"6","labels":["Knowledge"],"properties":{"title":"PHP"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"7","labels":["Knowledge"],"properties":{"title":"Symfony"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"8","labels":["Knowledge"],"properties":{"title":"Kohana"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"9","labels":["Knowledge"],"properties":{"title":"CodeIgniter"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"10","labels":["Knowledge"],"properties":{"title":"Doctrine2"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"11","labels":["Knowledge"],"properties":{"title":"Python"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"12","labels":["Knowledge"],"properties":{"title":"Flask"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"13","labels":["Knowledge"],"properties":{"title":"Nodejs"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"14","labels":["Knowledge"],"properties":{"title":"Express"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"15","labels":["Knowledge"],"properties":{"title":"Socketio"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"16","labels":["Knowledge"],"properties":{"title":"Mongoose"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"17","labels":["Knowledge"],"properties":{"title":"JavaScript"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"18","labels":["Knowledge"],"properties":{"title":"YUI"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"19","labels":["Knowledge"],"properties":{"title":"jQuery"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"20","labels":["Knowledge"],"properties":{"title":"AngularJS"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"21","labels":["Knowledge"],"properties":{"title":"DataBases"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"22","labels":["Knowledge"],"properties":{"title":"MySQL"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"23","labels":["Knowledge"],"properties":{"title":"MongoDB"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"24","labels":["Knowledge"],"properties":{"title":"Java"}}],"relationships":[]}},{"graph":{"nodes":[{"id":"25","labels":["Knowledge"],"properties":{"title":"Spring"}}],"relationships":[]}}]}],"errors":[]}
+       draw_forced_directory(data);
+</script>
+</head>
+<body>
+<div id="graph"></div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+CREATE (Web:Knowledge {title: "Web"})
+CREATE (SemanticWeb:Knowledge {title: "Semantic Web"})
+CREATE (Microdata:Knowledge {title: "Microdata"})
+
+CREATE (Microdata)-[:BELONGS_TO]->(Web)
+CREATE (SemanticWeb)-[:BELONGS_TO]->(Web)
+CREATE (Microdata)-[:BELONGS_TO]->(SemanticWeb)
+
+
+CREATE (HTTP:Knowledge {title: "HTTP"})
+CREATE (REST:Knowledge {title: "REST"})
+CREATE (Sockets:Knowledge {title: "Sockets"})
+
+//CREATE (HTTP)-[:BELONGS_TO]->(Web)
+CREATE (REST)-[:BELONGS_TO]->(HTTP)
+CREATE (Sockets)-[:BELONGS_TO]->(Web)
+CREATE (HTTP)-[:BELONGS_TO]->(Sockets) // TCP/IP
+
+
+CREATE (PHP:Knowledge {title: "PHP"})
+CREATE (Symfony:Knowledge {title: "Symfony"})
+CREATE (Kohana:Knowledge {title: "Kohana"})
+CREATE (CodeIgniter:Knowledge {title: "CodeIgniter"})
+CREATE (Doctrine2:Knowledge {title: "Doctrine2"})
+
+CREATE (PHP)-[:BELONGS_TO]->(Web)
+CREATE (Symfony)-[:BELONGS_TO]->(PHP)
+CREATE (Kohana)-[:BELONGS_TO]->(PHP)
+CREATE (CodeIgniter)-[:BELONGS_TO]->(PHP)
+CREATE (Doctrine2)-[:BELONGS_TO]->(PHP)
+
+
+CREATE (Python:Knowledge {title: "Python"})
+CREATE (Flask:Knowledge {title: "Flask"})
+
+CREATE (Python)-[:BELONGS_TO]->(Web)
+CREATE (Flask)-[:BELONGS_TO]->(Python)
+
+CREATE (Nodejs:Knowledge {title: "Nodejs"})
+CREATE (Express:Knowledge {title: "Express"})
+CREATE (Socketio:Knowledge {title: "Socketio"})
+CREATE (Mongoose:Knowledge {title: "Mongoose"})
+
+CREATE (Nodejs)-[:BELONGS_TO]->(Web)
+CREATE (Express)-[:BELONGS_TO]->(Nodejs)
+CREATE (Socketio)-[:BELONGS_TO]->(Nodejs)
+CREATE (Mongoose)-[:BELONGS_TO]->(Nodejs)
+
+
+CREATE (JavaScript:Knowledge {title: "JavaScript"})
+CREATE (YUI:Knowledge {title: "YUI"})
+CREATE (jQuery:Knowledge {title: "jQuery"})
+CREATE (AngularJS:Knowledge {title: "AngularJS"})
+
+CREATE (JavaScript)-[:BELONGS_TO]->(Web)
+CREATE (YUI)-[:BELONGS_TO]->(JavaScript)
+CREATE (jQuery)-[:BELONGS_TO]->(JavaScript)
+CREATE (AngularJS)-[:BELONGS_TO]->(JavaScript)
+
+
+CREATE (DataBases:Knowledge {title: "DataBases"})
+CREATE (MySQL:Knowledge {title: "MySQL"})
+CREATE (MongoDB:Knowledge {title: "MongoDB"})
+//CREATE (PostgreSQL:Knowledge {title: "PostgreSQL"})
+
+CREATE (MongoDB)-[:BELONGS_TO]->(DataBases)
+CREATE (MySQL)-[:BELONGS_TO]->(DataBases)
+//CREATE (PostgreSQL)-[:BELONGS_TO]->(DataBases)
+
+
+CREATE (Java:Knowledge {title: "Java"})
+CREATE (Spring:Knowledge {title: "Spring"})
+CREATE (SpringWeb:Knowledge {title: "Spring Web"})
+
+CREATE (Java)-[:BELONGS_TO]->(Web)
+CREATE (SpringWeb)-[:BELONGS_TO]->(Web)
+CREATE (SpringWeb)-[:BELONGS_TO]->(Spring)
+CREATE (Spring)-[:BELONGS_TO]->(Java)
+
+
+CREATE (Mongoose)-[:BELONGS_TO]->(MongoDB)
+
+MATCH (n:Knowledge) RETURN n
+
+:POST /db/data/transaction/commit
+  {"statements":[{"statement":"MATCH (n:Knowledge) RETURN n", "resultDataContents":["graph"]}]}

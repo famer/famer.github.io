@@ -1,0 +1,90 @@
+name: Timur
+surname: Tatarshaov
+citizenship: Russian Federation
+
+dateOfBirth: 30 of November 1988 yr.
+phone: "+7 920 293 22 23"
+skype: "gorbierd"
+linkedin: "ttatarshaov"
+flickr: "https://www.flickr.com/photos/famer"
+github: "famer"
+twitter: "famer"
+medium: famer
+email: post@osfonder.ru
+website: famer.github.io
+location: Nizhniy Novgorod, Russian Federation
+
+languages:
+ - title: English
+   level: Upper intermediate
+   additional: "[Certificate IELTS 6.0](/assets/certificates/IELTS/ielts.png)"
+ - title: Russian
+   level: Native
+ - title: Czech
+   level: Basic
+
+personalSkills:
+ - Team leader
+ - Problem solving
+ - Product oriented
+ - Communication
+ - Learning fast
+ - Focused
+
+areasOfExperience:
+ - Software design
+ - SQL database design
+ - NoSQL databases
+ - Microservices
+ - Web development
+ - Mobile development
+
+keySkillsAndCompetencies:
+ - Able to clearly communicate technical data to non technical colleagues and clients.
+ - Proactive. Сreative.
+ - Doesn't stuck in one technology stack.
+ - Continuously monitoring industry trends, technologies and standards.
+ - Solid web development experience using OOP, MVC, Java, Python, PHP, Node.js, AJAX, MySQL, MongoDB.
+ - Software development in C#, Swift, Objective-C, Java, Python
+
+academicQualifications:
+ - degree: Master's degree
+   major: Software Engineering in Web
+   university: Czech Technical University in Prague
+   graduationYear: 2016
+ - degree: Master's degree
+   major: Information Systems and Technologies
+   university: Nizhny Novgorod State Technical University
+   graduationYear: 2012
+ - degree: Bachelor's degree
+   major: Information Systems and Technologies
+   university: Nizhny Novgorod State Technical University
+   graduationYear: 2010
+
+personalProjects:
+- title: Pro Places
+  url: https://itunes.apple.com/us/app/pro-places/id948166579
+  sources: https://github.com/famer/Pro-Places
+  description: iOS application in Swift language. Lets to store, share and easily navigate to your favorite locations. Places is a brilliant navigation tool that lets you navigate to your places easily for everyone.
+- title: Spotty Finder
+  url: https://itunes.apple.com/us/app/spotty-finder/id867263619
+  description: iOS application in Objective-C. Want to know where is your child? Just ask her to send their location to you! Did you ever try to find a nice camping place that you had visited a previous year? Did you have trouble finding your car in a big parking lot? Buried the body of your enemy and forgot something in the grave? Want to visit that bar again but forget the name or address? Don't know where is exit from forest or park you are walking in? Kidnapped? Send your location to relatives to get help. Want to visit place where photo is taken? It’s not a problem any more! Just save the place you’d love to revisit in Spotty finder. When you want to return just open the app again and the arrow will point you in the direction with the distance.Perfect for when you don’t have internet connection or you’re out of the civilization. Internet connection is not required.
+- title: Folder Note
+  url: https://itunes.apple.com/us/app/folder-note/id961868178
+  description: iOS utility application in Swift language. Have you ever organized apps in the folders? If yes you probably require some annotation for them. Be more productive and organize your apps data. Folder Note allows you to make short visible annotations related to folder content.
+- title: Auto Finder
+  url: https://www.microsoft.com/en-us/store/apps/auto-finder/9nblggh0fkmf
+  sources: https://github.com/famer/auto-finder
+  description: Windows Phone 7-8 application in C#. This application allows you to find your car on parking lot, escape from trip or any other place that you marked. Pointer will lead you to your destination. You can easily find your friends anywhere by using a function of position sending. Device doesn't need internet connection to run this app. New version adds to you ability to view the map for better orientation.  With History of placemarks now! You are able to switch to metric system in new version(just tap the "distance" box on navigation page or explore settings page under a question mark). You have an ability to rename your places now!
+- title: Мега Поиск
+  url: https://www.microsoft.com/ru-ru/store/apps/Мега-поиск/9nblgggzkdwf
+  description: Same as above, but for Russian market.
+
+projects:
+- title: Сonference «My direction to new school»
+  date: June 2012
+  description: Project pointed to support Intel's conference. System contains full circle of abilities for creating activities, making appointments, user registration and participation, media library. Also system contains rating, inner mail and another accompany functionality.
+- title: Site52
+  date: 19 March 2007 – April 2013 (5 yrs. 1 month)
+  url: http://site52.ru/
+  description: "Design of the website-catalog of the local e-commerce websites. Includes MySQL database design, OOP design. Support and maintenace, content enchancement, security. Features implementation in PHP. Interface enchancements and functional featuring in JavaScript. Monthly analytics reports and support."

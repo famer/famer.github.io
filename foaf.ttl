@@ -1,0 +1,10 @@
+@prefix : <http://xmlns.com/foaf/0.1/> .
+
+<http://timurtatarshaov.me/#Person>
+	a :Person ;
+	:name "Timur Tatarshaov" ;
+	:nick "famer" ;
+	:homepage <http://timurtatarshaov.me> ;
+	:email <mailto:tatarshaov@gmail.com> ;
+	:img <http://timurtatarshaov.me/assets/photo2.jpg> ;
+	:interest <http://dbpedia.org/Badminton>, <http://dbpedia.org/Photography>, <http://dbpedia.org/Cross-country_skiing>, <http://dbpedia.org/Travel>, <http://dbpedia.org/page/Writing> ;

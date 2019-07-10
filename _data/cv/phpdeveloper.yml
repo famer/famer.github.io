@@ -1,0 +1,77 @@
+personalSummary: A highly resourceful, innovative, and competent software developer with extensive experience in the layout, design and coding of websites. Possessing considerable knowledge of the development of web applications and scripts using PHP, Node.js, Python and Java programming languages and MySQL & SQL Server databases along with experience with MongoDB. Experienced in developing applications and solutions for a wide range of corporate, charity and public sector clients and having the enthusiasm and ambition to complete projects to the highest standard. <br /> Looking for a suitable developer position with a ambitious & exciting company. <br /> Keen in solving problems with right tools.
+
+areasOfExperience:
+ - Software design
+ - SQL database design
+ - Client facing skills
+ - MongoDB
+ - Docker
+ - Web development
+ - Commercial experience
+ - Maven
+
+experiences:
+ - company: "CTU studies: dimploma in Software Engineering in Web"
+   title: Diploma thesis
+   period: 2015
+   responsibilities: Design and implementation of mobile application that will store points of interests to a server backend. Single points of interests are shared among users. Development of server backend that implements REST service for mobile app.
+   duties:
+    - Development of respective backend using Java and Spring Framework including Spring MVC, Spring Data, Spring Security.
+    - Design and development of the respective mobile client application for iOS in Swift.
+    - Providing unit tests for REST server backend.
+    - Development of user test cases.
+    - Analysis of possible technology stacks. Choice of optimal technologies.
+    - Development of security mechanisms.
+    - Containerization of the backend with Docker.
+    - Realization of build and deploy processes.
+   Stack: Java, Spring Framework(MVC, Data, Security), MongoDB, HTTP, HTTP Authentication, Swift, Objective C
+ - company: ME Technologies
+   title: Software Developer
+   period: 2013 – 2013
+   responsibilities: Working with manager and product owner to capture project of livechat for third-party websites requirements. Design and development of corresponding system. Optimization of existing modules and prototype.
+   duties:
+    - MongoDB database design and developement.
+    - Respective MongoDB queries development and optimization of existing queries of prototype.
+    - Development of respective Node.js modules 
+    - Redesign of system functioning processes. 
+    - Maintain security of the system.
+   stack: Node.js, MongoDB
+ - company: Digital marketing agency — Apnet LLC
+   title: Software Developer
+   period: 2011 – 2013 (2 years 4 months)
+   responsibilities: Working with designers, Fornt End, content managers and project managers staff to capture requirements of client — Intel's department in Russian Federation. Implementation of confirmed projects also support of existing projects.
+   duties:
+    - Maintain security of the websites from threats.
+    - Providing security audits.
+    - Development of project and modules structure.
+    - OOP design of the projects and modules.
+    - MySQL database design of the website and modules.
+    - Implementation of the projects and modules in PHP and MySQL.
+    - SQL queries analysis and optimizatio.
+    - Support of the project website.
+    - Coding UI enchancements and functinal solutions in JavaScript.
+    - Design of the functional modules for educational protal http://edugalaxy.intel.ru and independent events. 
+    - Optimization of work processes.
+   stack: PHP Frameworks, MySQL, SVN, Redmine, Hudson
+ - company: Web Design Company — Morizo
+   title: Software Developer
+   period: 2009 – 2010 (1 year 4 months)
+   responsibilities: Working with designers, Fornt End and project managers staff to capture requirements of clients — oweners of local and country-wide businesses to represent their presence on the web by means of PHP CMS. Categories are e-commerce, promo, company sites. Implementation of confirmed projects and support of existing projects. 
+   duties:
+    - Development of required modules for existing CMS in PHP.
+    - Customization of existing modules according to clients requirements.
+    - Coding of the UI enchancements in JavaScript.
+    - Transfer of existing projects of the clients.
+    - Automatization of the huge data transferring.
+    - Automatization of rutine processes using Bash and other tools.
+    - Solving legacy problems.
+    - Working with backups.
+    - Maintain security of the websites.
+ - company: Freelance
+   title: Software Developer
+   responsibilities: Development of the project requirements with clients. Implementation of agreed projects. Responsible time and task management. Providing feedback and support of the product later on.
+   duties: 
+      - Design and implementation of the system of fetching and storage weather-related data. Includes MySQL database design, OOP deisgn, scheme of deployment and further functional cycle.
+      - Design and implementation of the websystem for collecting data about level of education of graduates. Includes MySQL database design, interface design, OOP design, functional design.
+      - "Design of the website-catalog of the local e-commerce websites. Includes MySQL database design, OOP design. Support and maintenace, content enchancement, security. Features implementation in PHP. Interface enchancements and functional featuring in JavaScript. Monthly analytics reports. Time span: 19 March 2007 – April 2013 (5 yrs. 1 month)."
+   stack: PHP Frameworks, PHP ORM, MySQL, cron, YUI, jQuery

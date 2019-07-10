@@ -1,0 +1,42 @@
+name: Timur Tatarshaov
+description: "Timur Tatarshaov's web page"
+permalink: :title
+url: https://famer.github.io
+baseurl: /about
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+highlighters: pygments
+timezone: Europe/Moscow
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+repository_url: http://github.com/famer/about/
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "twocolumns"
+      author:
+        name: Timur Tatarshaov
+  -
+    scope:
+      path: "cv"
+    values:
+      type: "cv"
+      layout: "cv"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "blog"
+      #permalink: /blog/:title
+      author:
+        name: Timur Tatarshaov
+
+exclude:
+  - README.md
+  - LICENSE

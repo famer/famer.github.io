@@ -1,0 +1,93 @@
+{% include header.html %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button> <a class="navbar-brand" href="/">{{ site.name }}</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="{{ site.baseurl }}/">About me</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.baseurl }}/education/">Education</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.baseurl }}/skills/">Skills</a>
+                        </li>
+                        <li>
+                            <a href="/">Blog</a>
+                        </li>
+                        <li>
+                            <a href="{{ "/blog" | relative_url }}">Blog 2</a>
+                        </li>
+                        <li>
+                            <a href="https://medium.com/@{{ site.data.general_data.medium }}">Blog 3</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.baseurl }}/network/">Network</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.baseurl }}/acknowledgements/">Acknowledgements</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.baseurl }}/personal/">Personal</a>
+                        </li>
+                        <li>
+                            <a href="{{ "/contacts" | relative_url }}">Contacts</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </div>
+    <div class="row contentRow">
+	{{ content }}
+</div>
+<div class="row">
+
+    <div class="col-md-3">
+        <h3>
+            Other web
+        </h3>
+        <ul class="list-inline text-left">
+            <li><a target="_blank" href="{{ site.data.general_data.flickr }}">
+                <i class="fa fa-flickr fa-2x black"></i>
+            </a></li>
+            <li><a target="_blank" href="http://www.linkedin.com/in/{{ site.data.general_data.linkedin }}">
+                <i class="fa fa-linkedin-square fa-2x black"></i>
+            </a></li>
+            <li><a target="_blank" href="https://twitter.com/{{ site.data.general_data.twitter }}">
+                <i class="fa fa-twitter-square fa-2x black"></i>
+            </a></li>
+        </ul>
+    </div>
+
+    <div class="col-md-4">
+        <p>
+		Hosted on <a href="{{ site.repository_url }}">GitHub</a>.
+        </p>
+        <p>
+                © Timur Tatarshaov {{site.time | date: "%B %Y"}}
+            </p>
+
+    </div>
+</div>
+<footer class="footer text-right">
+    <div class="row">
+        <div class="col-md-11">
+
+        </div>
+    </div>
+</footer>
+</div>
+{% include footer.html %}
