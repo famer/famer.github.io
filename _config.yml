@@ -1,7 +1,7 @@
 name: Timur Tatarshaov
 description: "Timur Tatarshaov's web page"
 permalink: :title
-url: https://famer.github.io
+url: https://tatarshaov.ru
 baseurl: /
 markdown: kramdown
 kramdown:
